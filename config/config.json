@@ -1,0 +1,19 @@
+{
+    "compressorPath" : "/tools/yuicompressor-2.4.8.jar",
+    "jsAssetsPath" : "/assets/js/",
+    "cssAssetsPath" : "/assets/css/",
+    "outputJsDir" : "/dist/js/",
+    "outputCssDir" : "/dist/css/",
+    "combinedJsName" : "/tmp/scripts.js",
+    "combinedCssName" : "/tmp/style.css",
+    "compressedJsName" : "scripts.min.js",
+    "compressedCssName" : "styles.min.css",
+    "jsFiles" : [
+        "script1.js",
+        "script2.js"
+    ],
+    "cssFiles" : [
+        "style1.css",
+        "style2.css"
+    ]
+}
