@@ -1,5 +1,10 @@
 <?php 
 
+/**
+ * Testing assets optimizer
+ * @author Miroslav Milosevic <m.maksa@gmail.com>
+ */
+
 /* Require Autoloader */
 require_once 'src/MM/Autoloader.php';
 
@@ -16,19 +21,19 @@ use MM\Combiner\Combiner;
 
 /* Get configuration */
 $config = new Config(__DIR__ . "/config/config.json");
-//print_r($config->getConfig());
 
-//$loader = new Loader($config);
+/**
+ * Create assets loader instance
+ * 
+ * $env - in case that env is different from production (development, or etc..)
+ * all assets (.css and .js) will be loaded separate
+ * on production env all assets will be combined and compressed into two files .min.js and .min.css
+ */
+$env = "development";
+$loader = new Loader($config, $env);
 
-/* Combine all assets (.css and .js) into one file */
-//$combiner = new Combiner($config);
-//$combiner->combineAssets();
-//
-//$compressor = new \MM\Compressor\Compressor($config);
-//$compressor->compressCSS();
-//$compressor->compressJS();
-
-$loader = new Loader($config);
-
+/* Output css file */
 echo $loader->getCss();
+
+/* Output js file */
 echo $loader->getJs();
