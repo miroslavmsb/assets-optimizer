@@ -29,7 +29,7 @@ $config = new Config(__DIR__ . "/config/config.json");
  * all assets (.css and .js) will be loaded separate
  * on production env all assets will be combined and compressed into two files .min.js and .min.css
  */
-$env = "development";
+$env = "production";
 $loader = new Loader($config, $env);
 
 /* Output css file */
